@@ -14,3 +14,6 @@ spring:
     cache: false
 mybatis-plus:
   mapper-locations: classpath*:/mapper/*.xml
+logging:
+  level:
+    com.wiesen.parking.mapper: debug

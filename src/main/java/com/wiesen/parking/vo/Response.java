@@ -10,9 +10,42 @@ import lombok.Data;
 @Data
 public class Response<T> {
 
+    public static final String SUCCESS_CODE = "0000";
+    public static final String login_fail   = "0001";
+
+    public static final String FAIL_CODE    = "9999";
+
     private String code;
 
     private String msg;
 
     private T data;
+
+    public Response(String code, String msg) {
+        this.code = code;
+        this.msg = msg;
+    }
+
+    public Response(String code, String msg, T data) {
+        this.code = code;
+        this.msg = msg;
+        this.data = data;
+    }
+
+    public static <T> Response<T> success() {
+        return success(null);
+    }
+
+    public static <T> Response<T> success(T data) {
+        return new Response<T>(SUCCESS_CODE, "请求成功", data);
+    }
+
+    public static Response fail(String code, String msg) {
+        return new Response(code, msg);
+    }
+
+    public static Response fail() {
+        return fail(FAIL_CODE, "请求失败");
+    }
+
 }

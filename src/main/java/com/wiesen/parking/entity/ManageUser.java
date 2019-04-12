@@ -9,11 +9,9 @@ public class ManageUser extends BaseEntity {
 
     private Long communityId;
 
-    private String username;
+    private String mobile;
 
     private String password;
-
-    private String mobile;
 
     private String realName;
 

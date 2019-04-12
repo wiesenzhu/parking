@@ -17,7 +17,6 @@ public class ManageUserMapperTest extends ParkingApplicationTests {
         mu.setMobile("13282809475");
         mu.setPassword("123456");
         mu.setRealName("张三");
-        mu.setUsername("zhangs");
         int insert = manageUserMapper.insert(mu);
         System.out.println(insert);
     }

@@ -1,6 +1,8 @@
 package com.wiesen.parking.controller;
 
+import com.wiesen.parking.service.UserService;
 import com.wiesen.parking.vo.UserVO;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,12 +15,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class HomeController {
 
+    @Autowired
+    private UserService userService;
+
     @RequestMapping("index")
     public String index(Model model) {
-        UserVO userVO = new UserVO();
-        userVO.setCommunityName("樱花府第");
-        userVO.setRealName("祝西华");
-        model.addAttribute("user", userVO);
+
         return "index";
     }
 
