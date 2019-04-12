@@ -1,0 +1,102 @@
+/*body {
+	background: url(../imgs/login_reg_bg.png) no-repeat top;
+	background-size: 100%;
+}*/
+
+.tabs {
+	/*width: 100%;*/
+	height: 275px;
+	background: url(../imgs/login_reg_bg.png) no-repeat;
+	background-size: 100%;
+	background-position: bottom;
+	position: relative;
+	/*margin-bottom: 55px;*/
+}
+
+.img_bottom {
+	width: 100%;
+	height: 46px;
+	position: absolute;
+	bottom: 0;
+}
+
+.tabs .f_left {
+	font-size: 17px;
+	color: rgba(255, 255, 255, 0.5);
+	/*display: inline-block;*/
+	/*letter-spacing: 3px;*/
+}
+
+.split {
+	width: 2%;
+}
+
+.login,
+.register {
+	width: 49%;
+}
+
+.tabs .f_left span {
+	display: block;
+	height: 46px;
+	width: 34px;
+	line-height: 46px;
+	margin: 0 auto;
+	/*width: 50px;*/
+	/*margin-left: 50px;*/
+}
+
+.tabs .active {
+	color: rgba(255, 255, 255, 1);
+	background: url(../imgs/triangle.png) no-repeat bottom;
+	font-weight: 600;
+}
+
+
+/* form部分 */
+
+._register {
+	/*display: none;*/
+}
+._login {
+	display: none;
+}
+
+._area input {
+	font-size: 15px;
+	/*padding-left: 15px;*/
+}
+
+._area input[type=submit] {
+	display: block;
+	width: 280px;
+	height: 40px;
+	background: -webkit-linear-gradient(left, rgba(87, 46, 222, 1), rgba(57, 76, 231, 1));
+	border-radius: 20px;
+	margin: 0 auto;
+	color: rgba(253, 254, 255, 1);
+	font-size: 16px;
+	letter-spacing: 15px;
+	line-height: 40px;
+	padding-left: 15px;
+	
+}
+
+._area div {
+	width: 70%;
+	height: 35px;
+	border-bottom: 1px solid rgba(241, 241, 241, 1);
+	/*font-size: 14px;*/
+	margin: 0 auto;
+	margin-top: 40px;
+}
+
+._area ._sub {
+	width: 100%;
+	height: 40px;
+	/*position: absolute;
+	bottom: 96px;*/
+	margin-top: 60px;
+	padding-bottom: 100px;
+	border: none;
+}

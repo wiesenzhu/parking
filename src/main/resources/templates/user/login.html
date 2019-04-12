@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>登录</title>
+		<link rel="stylesheet" type="text/css" th:href="@{/css/bases.css}" />
+		<link rel="stylesheet" type="text/css" th:href="@{/css/logins.css}" />
+	</head>
+
+	<body>
+		<div class="content">
+			<div class="tabs">
+				<div class="img_bottom clearFix">
+					<div class="login f_left active">
+						<span>登录</span>
+					</div>
+					<div class="split f_left">
+						<span>|</span>
+					</div>
+					<div class="register f_left">
+						<span>注册</span>
+					</div>
+				</div>
+			</div>
+			<div class="_area _login">
+				<form action="#" method="post">
+					<div class="">
+						<input type="text" name="mobile" value="" placeholder="手机号码" />
+					</div>
+					<div class="">
+						<input type="password" name="password" placeholder="登录密码" />
+					</div>
+					<div class="_sub">
+						<input type="submit" value="登录"/>
+					</div>
+				</form>
+			</div>
+			<div class="_area _register">
+				<form action="#" method="post">
+					<div class="">
+						<input type="text" name="mobile" value="" placeholder="手机号码" />
+					</div>
+					<div class="">
+						<input type="password" name="password" placeholder="登录密码" />
+					</div>
+					<div class="">
+						<input type="text" name="mobile" value="" placeholder="真实姓名" />
+					</div>
+					<div class="">
+						<input type="text" name="mobile" value="" placeholder="所属小区" />
+					</div>
+					<div class="_sub">
+						<input type="submit" value="提交"/>
+					</div>
+				</form>
+			</div>
+		</div>
+	</body>
+
+</html>

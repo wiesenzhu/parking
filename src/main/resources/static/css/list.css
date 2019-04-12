@@ -1,0 +1,168 @@
+body {
+	background-color: #f5f5f5;
+}
+
+.head {
+	height: 125px;
+	width: 100%;
+	margin: 0 auto;
+	/*border: 1px solid red;*/
+	background-color: #f5f5f5;
+	padding-top: 35px;
+	position: fixed;
+	top: 0;
+	z-index: 999;
+}
+
+.box {
+	background-color: #f5f5f5;
+	height: 100%;
+	width: 100%;
+}
+
+#_back {
+	padding: 0;
+	width: 60px;
+	height: 90px;
+	display: block;
+	float: left;
+	border: 0;
+	background: url(../imgs/back_ico.png);
+	background-repeat: no-repeat;
+	background-position: left;
+}
+
+#_search {
+	border: 0;
+	border-radius: 80px;
+	width: 85%;
+	height: 90px;
+	font-size: 36px;
+	line-height: 40px;
+	display: none;
+	float: left;
+	/*margin-left: 30px;*/
+	padding-left: 30px;
+}
+
+#_searchBtn {
+	padding: 0;
+	width: 60px;
+	height: 90px;
+	background: url(../imgs/search_ico.png);
+	background-repeat: no-repeat;
+	background-position: right;
+	display: block;
+	float: right;
+	border: 0;
+}
+
+#_subTitle {
+	width: 100%;
+	height: 90px;
+	line-height: 90px;
+	text-align: center;
+	display: block;
+	/*position: fixed;
+				top: auto;*/
+	font-size: 57px;
+	font-weight: bold;
+	letter-spacing: 3px;
+}
+
+.content {
+	margin-top: 190px;
+}
+
+._tab {
+	background-color: #fefefe;
+	width: 87%;
+	/*height: 200px;*/
+	border-radius: 10px;
+	margin: 0 auto;
+	margin-bottom: 35px;
+	box-shadow: #dddddd 0px 0px 50px;
+	position: relative;
+	padding-left: 24px;
+	padding-top: 49px;
+	padding-right: 24px;
+	padding-bottom: 30px;
+}
+
+._tab span {
+	color: #b7b7b7;
+	font-size: 34px;
+	line-height: 60px;
+}
+
+._enter,
+._exit {
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	display: inline-block;
+	font-size: 35px;
+	line-height: 60px;
+	text-align: center;
+	position: absolute;
+	top: 25px;
+	right: 25px;
+}
+
+._tab ._enter {
+	color: #fea665;
+	border: 2px solid #fea665
+}
+
+._tab ._exit {
+	color: #5c95fd;
+	border: 2px solid #5c95fd;
+}
+
+._line {
+	width: 100%;
+	height: 1px;
+	border-bottom: 1px solid rgba(241, 241, 241, 1);
+	margin: 0 auto;
+	margin-top: 30px;
+	margin-bottom: 20px;
+}
+
+._tab ._info_str {
+	color: #333333;
+}
+
+._tab .plateNumber {
+	font-size: 42px;
+	font-weight: bold;
+}
+
+._tab ._mobile {
+	display: inline-block;
+	float: right;
+}
+
+#headTabs {
+	width: 90%;
+	margin: 0 auto;
+}
+#_reset {
+	display: block;
+	width: 80px;
+	height: 80px;
+	/*border: 1px solid red;*/
+	border: 0;
+	background: url(../imgs/reset_ico.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	border-radius: 50%;
+	position: absolute;
+	top: 41px;
+    right: 191px;
+    display: none;
+	
+}
+
+input {
+	box-sizing:border-box;
+}

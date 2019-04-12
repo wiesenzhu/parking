@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wiesen.parking.mapper.CarRecordMapper">
+
+    <select id="queryByPlateOrPhone"
+            parameterType="java.lang.String"
+            resultType="com.wiesen.parking.entity.RecordPO">
+        SELECT
+          p.plate_number AS plateNumber,
+          p.owner_name AS ownerName,
+          p.owner_phone AS ownerPhone,
+          r.type,
+          r.reason,
+          r.create_time AS recTime
+        FROM
+          car_plate p,
+          car_record r
+        WHERE p.id = r.plate_id
+          AND p.is_deleted = 0
+          AND r.is_deleted = 0
+        <if test="value != null and value != ''">
+            AND (
+            p.plate_number = #{value}
+            OR p.owner_phone = #{value}
+            )
+        </if>
+        ORDER BY r.create_time DESC
+  </select>
+</mapper>

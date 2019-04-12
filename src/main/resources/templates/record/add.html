@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>新增</title>
+		<link rel="stylesheet" type="text/css" th:href="@{/css/commonn.css}" />
+		<link rel="stylesheet" type="text/css" th:href="@{/css/add.css}" />
+	</head>
+
+	<body>
+		<div class="box">
+			<div class="_info">
+				录入车辆信息
+			</div>
+			<div class="_form">
+				<div class="clearfix _inpu">
+					<span>车牌号码：</span>
+					<input type="text" name="plateNum" id="plateNum" value="" placeholder="" />
+				</div>
+				<div class="clearfix _inpu">
+					<span>手机号码：</span>
+					<input type="text" name="plateNum" id="plateNum" value="" placeholder="" />
+				</div>
+				<div class="clearfix _inpu">
+					<span>出入原因：</span>
+					<input type="text" name="plateNum" id="plateNum" value="" placeholder="" />
+				</div>
+				<div class="clearfix _inpu">
+					<span>出入类型：</span>
+					<input type="radio" name="type" id="type" value="1" checked="checked"/>进入
+					<input type="radio" name="type" id="type" value="0" />离开
+				</div>
+				<div class="_submitBtn">
+					<input type="button" value="提交" />
+				</div>
+
+			</div>
+		</div>
+	</body>
+
+</html>

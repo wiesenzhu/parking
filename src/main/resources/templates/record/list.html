@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <!--<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />-->
+    <title>列表</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/commonn.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/list.css}"/>
+    <link rel="icon" href="data:image/ico;base64,aWNv">
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js">
+    </script>
+</head>
+
+<body>
+<div class="box">
+    <div class="clearfix head">
+        <div id="headTabs">
+            <input type="button" id="_back"/>
+            <input type="text" id="_search" value="" placeholder="请输入需要查询的车牌号/手机号"/>
+            <input type="button" id="_searchBtn"/>
+            <span id="_subTitle">
+						车辆进出记录
+					</span>
+            <input type="button" id="_reset"/>
+        </div>
+    </div>
+    <div class="content">
+
+        <div class="_tab" th:each="record : ${list}">
+            <span>车牌: </span><span class="_info_str plateNumber" th:text="${record.plateNumber}"></span><br/>
+            <span th:class="${record.type == 0}? '_enter' : '_exit'" th:text="${record.type == 0}? '进' : '出'">
+
+					</span>
+            <span>时间: </span><span class="_info_str"
+                                   th:text="${#dates.format(record.recTime, 'yyyy-MM-dd HH:mm:ss')}"></span>
+            <div class="_mobile">
+                <span>电话: </span><span class="_info_str" th:text="${record.ownerPhone}"></span>
+            </div>
+            <div class="_line"></div>
+            <span>原因: </span><span class="_info_str" th:text="${record.reason}"></span>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    var url = window.location.host;
+    console.log(url);
+
+    $('#_searchBtn').click(function () {
+        // 判断返回按钮是否隐藏
+        var flag = $("#_back").is(":hidden");
+        if (flag) {
+            // 判断输入框是否有内容
+            var searchStr = $.trim($('#_search').val());
+            console.log(searchStr);
+
+            if (searchStr != '') {
+                // 如果搜索内容不为空, 则执行查询
+                console.log('adsf' + searchStr + 'asdfdsfa');
+                window.open("http://wiesen.nat300.top/parking/record/list?val=" + searchStr);
+            } else {
+                // 如果内容为空 查全部
+                window.open("http://wiesen.nat300.top/parking/record/list");
+            }
+            // 清空搜索框, 隐藏搜索框, 隐藏删除按钮, 显示返回按钮和副标题
+            $('#_subTitle').show();
+            $('#_back').show();
+            $('#_search').val('');
+            $('#_search').hide();
+            $('#_reset').hide();
+        } else {
+            $('#_subTitle').hide();
+            $('#_back').hide();
+            $('#_search').show();
+        }
+    });
+
+    // 监听搜索框内容变化
+    $('#_search').bind('input propertychange', function () {
+        if ($(this).val().length > 0) {
+            $('#_reset').show();
+        } else {
+            $('#_reset').hide();
+        }
+    });
+    $('#_reset').click(function () {
+        $('#_search').val('');
+        $('#_reset').hide();
+    });
+
+</script>
+</body>
+
+</html>
