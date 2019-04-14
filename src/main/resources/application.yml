@@ -17,3 +17,13 @@ mybatis-plus:
 logging:
   level:
     com.wiesen.parking.mapper: debug
+
+parking:
+  ignoreUris:
+#    - /parking/favicon.ico
+#    - /parking/css
+#    - /parking/imgs
+#    - /parking/js
+    - /parking/user/login
+    - /parking/user/doLogin
+    - /parking/error

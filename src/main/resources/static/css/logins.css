@@ -56,10 +56,10 @@
 /* form部分 */
 
 ._register {
-	/*display: none;*/
+	display: none;
 }
 ._login {
-	display: none;
+	/*display: none;*/
 }
 
 ._area input {

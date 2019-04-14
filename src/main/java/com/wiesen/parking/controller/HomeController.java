@@ -1,5 +1,6 @@
 package com.wiesen.parking.controller;
 
+import com.wiesen.parking.filter.UserHolder;
 import com.wiesen.parking.service.UserService;
 import com.wiesen.parking.vo.UserVO;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +21,9 @@ public class HomeController {
 
     @RequestMapping("index")
     public String index(Model model) {
-
+        UserVO userVO = UserHolder.gerCurrentUser();
+        System.out.println(userVO);
+        model.addAttribute("user", userVO);
         return "index";
     }
 

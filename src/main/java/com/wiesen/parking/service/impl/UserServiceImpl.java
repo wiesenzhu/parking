@@ -22,21 +22,22 @@ public class UserServiceImpl implements UserService {
     private CommunityMapper communityMapper;
 
     @Override
-    public Long validLoginInfo(LoginVO vo) {
+    public UserVO validLoginInfo(LoginVO vo) {
         ManageUser mu = new ManageUser();
         mu.setMobile(vo.getMobile());
         mu.setPassword(vo.getPassword());
         mu = manageUserMapper.selectOne(new QueryWrapper<>(mu));
         if (null != mu) {
-//            // 用户名密码正确, 查询小区信息
-//            UserVO userVO = new UserVO();
-//            userVO.setRealName(mu.getRealName());
-//            userVO.setMobile(mu.getMobile());
-//            Community community = communityMapper.selectById(mu.getCommunityId());
-//            if (null != community) {
-//                userVO.setCommunityName(community.getName());
-//            }
-            return mu.getId();
+            // 用户名密码正确, 查询小区信息
+            UserVO userVO = new UserVO();
+            userVO.setRealName(mu.getRealName());
+            userVO.setMobile(mu.getMobile());
+            userVO.setUserId(mu.getId());
+            Community community = communityMapper.selectById(mu.getCommunityId());
+            if (null != community) {
+                userVO.setCommunityName(community.getName());
+            }
+            return userVO;
         }
         return null;
     }

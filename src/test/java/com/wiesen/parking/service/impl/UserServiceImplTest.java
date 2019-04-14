@@ -9,8 +9,6 @@ import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.Assert;
 
-import static org.junit.Assert.*;
-
 /**
  * @Description
  * @auther wiesen
@@ -27,8 +25,8 @@ public class UserServiceImplTest extends ParkingApplicationTests {
         LoginVO vo = new LoginVO();
         vo.setMobile("13282809400");
         vo.setPassword("123456");
-        Long userId = userService.validLoginInfo(vo);
-        Assert.notNull(userId, "未查出用户, 测试未通过");
+        UserVO userVO = userService.validLoginInfo(vo);
+        Assert.notNull(userVO, "未查出用户, 测试未通过");
     }
 
     @Test

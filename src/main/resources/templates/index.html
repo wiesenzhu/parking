@@ -11,11 +11,11 @@
 	</head>
 	<body>
 		<div class="head_info">
-			<span id="_name">
-				祝小兵
+			<span id="_name" th:text="${user.realName}">
+				<!--祝小兵-->
 			</span>
-			<span id="_community">
-				樱花府第小区
+			<span id="_community" th:text="${user.communityName}">
+				<!--樱花府第小区-->
 			</span>
 			<img th:src="@{/imgs/index_head.png}"/>
 		</div>

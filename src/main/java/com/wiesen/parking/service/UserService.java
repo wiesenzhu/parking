@@ -5,7 +5,7 @@ import com.wiesen.parking.vo.UserVO;
 
 public interface UserService {
 
-    Long validLoginInfo(LoginVO vo);
+    UserVO validLoginInfo(LoginVO vo);
 
     UserVO getUserInfo(Long userId);
 }

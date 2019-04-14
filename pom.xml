@@ -61,13 +61,11 @@
             <artifactId>lombok</artifactId>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/net.sourceforge.tess4j/tess4j -->
-        <!--<dependency>-->
-            <!--<groupId>net.sourceforge.tess4j</groupId>-->
-            <!--<artifactId>tess4j</artifactId>-->
-            <!--<version>3.4.8</version>-->
-        <!--</dependency>-->
-
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.44</version>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>

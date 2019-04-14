@@ -4,6 +4,7 @@ import com.wiesen.parking.constrants.SysConstrants;
 import com.wiesen.parking.service.UserService;
 import com.wiesen.parking.vo.LoginVO;
 import com.wiesen.parking.vo.Response;
+import com.wiesen.parking.vo.UserVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -36,11 +37,11 @@ public class UserController {
     public Response doLogin(@Validated LoginVO loginVO, HttpServletRequest request) {
 //        System.out.println(loginVO.getUsername());
         System.out.println(loginVO.getPassword());
-        Long userId = userService.validLoginInfo(loginVO);
-        if (null != userId) {
+        UserVO userVO = userService.validLoginInfo(loginVO);
+        if (null != userVO) {
             // 登录成功
             HttpSession session = request.getSession();
-            session.setAttribute(SysConstrants.SESSION_KEY, userId);
+            session.setAttribute(SysConstrants.SESSION_KEY, userVO);
             session.setMaxInactiveInterval(SysConstrants.LOGIN_EXPIRE_TIME); // 单位: 秒
             return Response.success();
         } else {

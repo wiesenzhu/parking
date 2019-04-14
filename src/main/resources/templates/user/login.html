@@ -7,6 +7,9 @@
 		<title>登录</title>
 		<link rel="stylesheet" type="text/css" th:href="@{/css/bases.css}" />
 		<link rel="stylesheet" type="text/css" th:href="@{/css/logins.css}" />
+		<link rel="shortcut icon" th:href="@{/favicon.ico}"/>
+		<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script type="text/javascript" th:src="@{/js/login.js}"></script>
 	</head>
 
 	<body>
@@ -25,7 +28,7 @@
 				</div>
 			</div>
 			<div class="_area _login">
-				<form action="#" method="post">
+				<form th:action="@{/user/doLogin}" method="post">
 					<div class="">
 						<input type="text" name="mobile" value="" placeholder="手机号码" />
 					</div>

@@ -28,12 +28,16 @@
     <div class="content">
 
         <div class="_tab" th:each="record : ${list}">
-            <span>车牌: </span><span class="_info_str plateNumber" th:text="${record.plateNumber}"></span><br/>
+            <span>车牌: </span><span class="_info_str plateNumber" th:text="${record.plateNumber}">
+
+        </span><br/>
             <span th:class="${record.type == 0}? '_enter' : '_exit'" th:text="${record.type == 0}? '进' : '出'">
 
-					</span>
-            <span>时间: </span><span class="_info_str"
-                                   th:text="${#dates.format(record.recTime, 'yyyy-MM-dd HH:mm:ss')}"></span>
+            </span>
+            <span>时间: </span>
+            <span class="_info_str" th:text="${#dates.format(record.recTime, 'yyyy-MM-dd HH:mm:ss')}">
+
+            </span>
             <div class="_mobile">
                 <span>电话: </span><span class="_info_str" th:text="${record.ownerPhone}"></span>
             </div>

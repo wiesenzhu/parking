@@ -7,7 +7,7 @@ package com.wiesen.parking.constrants;
  */
 public interface SysConstrants {
 
-    String SESSION_KEY = "userId";
+    String SESSION_KEY = "userInfo";
 
     int LOGIN_EXPIRE_TIME = 120;
 
