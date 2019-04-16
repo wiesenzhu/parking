@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>出错啦</title>
+		<link rel="stylesheet" type="text/css" th:href="@{/css/base.css}"/>
+		<link rel="stylesheet" type="text/css" th:href="@{/css/error.css}"/>
+		<link rel="shortcut icon" th:href="@{/favicon.ico}"/>
+	</head>
+	<body>
+		<img th:src="@{/imgs/not_found_bg.png}"/>
+		<!--<img src="../static/imgs/error_bg.png"/>-->
+        <span id="err_info" th:text="${errMsg!=null?errMsg:'啊哦, 你的页面逃跑啦啦啦~~'}">
+			<!--啊哦, 你的页面逃跑啦啦啦~~-->
+		</span>
+		<a href="/park/templates/index.html">返回首页</a>
+	</body>
+</html>

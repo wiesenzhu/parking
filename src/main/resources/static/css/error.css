@@ -1,0 +1,36 @@
+body {
+	padding-top: 130px;
+}
+img {
+	display: block;
+	width: 278px;
+	height: 134px;
+	margin: 0 auto;
+	/*margin-top: 130px;*/
+}
+
+span {
+	color: rgba(102, 102, 102, 1);
+	font-size: 14px;
+	margin: 0 auto;
+	display: block;
+	width: 187px;
+	margin: 0 auto;
+	margin-top: 14px;
+	text-align: center;
+}
+
+a {
+	display: block;
+	width: 150px;
+	height: 40px;
+	background: -webkit-linear-gradient( left, rgba(87, 46, 222, 1), rgba(57, 76, 231, 1));
+	font-size: 17px;
+	color: rgba(253, 254, 255, 1);
+	line-height: 40px;
+	text-align: center;
+	border-radius: 20px;
+	margin: 0 auto;
+	margin-top: 60px;
+	
+}

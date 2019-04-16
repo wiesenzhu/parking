@@ -20,10 +20,13 @@ public class HomeController {
     private UserService userService;
 
     @RequestMapping("index")
-    public String index(Model model) {
+    public String index(Model model) throws Exception {
         UserVO userVO = UserHolder.gerCurrentUser();
         System.out.println(userVO);
         model.addAttribute("user", userVO);
+        if (1 == 1) {
+            throw new Exception("asdfsaddf");
+        }
         return "index";
     }
 

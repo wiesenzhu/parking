@@ -3,8 +3,9 @@
 
 	<head>
 		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<title>新增</title>
-		<link rel="stylesheet" type="text/css" th:href="@{/css/commonn.css}" />
+		<link rel="stylesheet" type="text/css" th:href="@{/css/base.css}"/>
 		<link rel="stylesheet" type="text/css" th:href="@{/css/add.css}" />
 	</head>
 
@@ -14,22 +15,37 @@
 				录入车辆信息
 			</div>
 			<div class="_form">
-				<div class="clearfix _inpu">
-					<span>车牌号码：</span>
-					<input type="text" name="plateNum" id="plateNum" value="" placeholder="" />
+				<div class="clearFix _inpu">
+					<span class="_sub_title f_left">车牌号码：</span>
+					<input type="text" name="plateNum" id="plateNum" value="" placeholder="" class="f_right" />
 				</div>
-				<div class="clearfix _inpu">
-					<span>手机号码：</span>
-					<input type="text" name="plateNum" id="plateNum" value="" placeholder="" />
+				<div class="clearFix _inpu">
+					<span class="_sub_title f_left">手机号码：</span>
+					<input type="text" name="plateNum" id="plateNum" value="" placeholder="" class="f_right" />
 				</div>
-				<div class="clearfix _inpu">
-					<span>出入原因：</span>
-					<input type="text" name="plateNum" id="plateNum" value="" placeholder="" />
+				<div class="clearFix _inpu">
+					<span class="_sub_title f_left">出入原因：</span>
+					<input type="text" name="plateNum" id="plateNum" value="" placeholder="" class="f_right" />
 				</div>
-				<div class="clearfix _inpu">
-					<span>出入类型：</span>
-					<input type="radio" name="type" id="type" value="1" checked="checked"/>进入
-					<input type="radio" name="type" id="type" value="0" />离开
+				<div class="clearFix _inpu">
+					<span class="_sub_title f_left">出入类型：</span>
+					<!--<input type="radio" name="type" id="type" value="1" checked="checked" />进入
+					<input type="radio" name="type" id="type" value="0" />离开-->
+
+					<div id="_radios">
+						<label for="_enter" class="radio">
+						    <span class="radio-bg"></span>
+						    <input type="radio" name="type" id="_enter" value="1" checked="checked" /> 进入
+						    <span class="radio-on"></span>
+						</label>
+						<label for="_exit" class="radio">
+						    <span class="radio-bg"></span>
+						    <input type="radio" name="type" id="_exit" value="0" /> 离开
+						    <span class="radio-on"></span>
+						</label>
+					</div>
+					
+
 				</div>
 				<div class="_submitBtn">
 					<input type="button" value="提交" />
