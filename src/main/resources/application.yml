@@ -2,13 +2,16 @@ server:
   port: 8899
   servlet:
     context-path: /parking
-
+# 你好啊
+# 这是配置文件
+# 接下来要做配置中心
+# 密码加密
 spring:
   datasource:
     url: jdbc:mysql://localhost/parking?characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
-    # password: Whl130127=zb
+#    password: Whl130127=zb
     password: 123456
   thymeleaf:
     cache: false
@@ -26,4 +29,5 @@ parking:
 #    - /parking/js
     - /parking/user/login
     - /parking/user/doLogin
+    - /parking/user/doRegister
     - /parking/error

@@ -3,6 +3,7 @@ package com.wiesen.parking.controller;
 import com.wiesen.parking.constrants.SysConstrants;
 import com.wiesen.parking.service.UserService;
 import com.wiesen.parking.vo.LoginVO;
+import com.wiesen.parking.vo.RegisterVO;
 import com.wiesen.parking.vo.Response;
 import com.wiesen.parking.vo.UserVO;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,7 +37,7 @@ public class UserController {
     @ResponseBody
     public Response doLogin(@Validated LoginVO loginVO, HttpServletRequest request) {
 //        System.out.println(loginVO.getUsername());
-        System.out.println(loginVO.getPassword());
+//        System.out.println(loginVO.getPassword());
         UserVO userVO = userService.validLoginInfo(loginVO);
         if (null != userVO) {
             // 登录成功
@@ -52,11 +53,11 @@ public class UserController {
 
     @RequestMapping(method = RequestMethod.POST, value = "doRegister")
     @ResponseBody
-    public Response doRegister(@Validated LoginVO loginVO) {
+    public Response doRegister(@Validated RegisterVO registerVO) {
 //        System.out.println(loginVO.getUsername());
-        System.out.println(loginVO.getPassword());
-
-        return null;
+//        System.out.println(loginVO.getPassword());
+        userService.mUserRegister(registerVO);
+        return Response.success();
     }
 
     public static void main(String[] asdf) {

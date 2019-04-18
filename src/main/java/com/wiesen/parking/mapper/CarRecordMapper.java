@@ -6,8 +6,9 @@ import com.wiesen.parking.entity.RecordPO;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
+import java.util.Map;
 
 public interface CarRecordMapper extends BaseMapper<CarRecord> {
 
-    List<RecordPO> queryByPlateOrPhone(@Param("value") String value);
+    List<RecordPO> queryByPlateOrPhone(Map param);
 }

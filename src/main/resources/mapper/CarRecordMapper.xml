@@ -3,26 +3,31 @@
 <mapper namespace="com.wiesen.parking.mapper.CarRecordMapper">
 
     <select id="queryByPlateOrPhone"
-            parameterType="java.lang.String"
+            parameterType="java.util.Map"
             resultType="com.wiesen.parking.entity.RecordPO">
         SELECT
-          p.plate_number AS plateNumber,
-          p.owner_name AS ownerName,
-          p.owner_phone AS ownerPhone,
+          r.plate_number AS plateNumber,
+          r.owner_name AS ownerName,
+          r.owner_phone AS ownerPhone,
           r.type,
           r.reason,
           r.create_time AS recTime
         FROM
-          car_plate p,
+--           car_plate p,
           car_record r
-        WHERE p.id = r.plate_id
-          AND p.is_deleted = 0
-          AND r.is_deleted = 0
+        WHERE
+        -- p.id = r.plate_id
+         -- AND p.is_deleted = 0
+         -- AND
+         r.is_deleted = 0
         <if test="value != null and value != ''">
             AND (
-            p.plate_number = #{value}
-            OR p.owner_phone = #{value}
+            r.plate_number = #{value}
+            OR r.owner_phone = #{value}
             )
+        </if>
+        <if test="communityId != null and communityId != ''">
+            AND r.community_id = #{communityId}
         </if>
         ORDER BY r.create_time DESC
   </select>

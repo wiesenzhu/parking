@@ -57,7 +57,7 @@ public class SessionFilter implements Filter {
                 String requestType = request.getHeader("X-Requested-With");
                 //判断是否是ajax请求
                 if (requestType != null && "XMLHttpRequest".equals(requestType)) {
-                    response.getWriter().write(JSON.toJSONString(Response.fail(Response.login_fail, NO_LOGIN)));
+                    response.getWriter().write(JSON.toJSONString(Response.fail(Response.LOGIN_FAIL, NO_LOGIN)));
                 } else {
                     //重定向到登录页(需要在static文件夹下建立此html文件)
                     response.sendRedirect(request.getContextPath() + "/user/login");

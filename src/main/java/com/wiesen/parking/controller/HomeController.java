@@ -24,9 +24,9 @@ public class HomeController {
         UserVO userVO = UserHolder.gerCurrentUser();
         System.out.println(userVO);
         model.addAttribute("user", userVO);
-        if (1 == 1) {
-            throw new Exception("asdfsaddf");
-        }
+//        if (1 == 1) {
+//            throw new Exception("asdfsaddf");
+//        }
         return "index";
     }
 

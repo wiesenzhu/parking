@@ -11,7 +11,8 @@ import lombok.Data;
 public class Response<T> {
 
     public static final String SUCCESS_CODE = "0000";
-    public static final String login_fail   = "0001";
+    public static final String LOGIN_FAIL   = "0001";
+    public static final String REG_FAIL     = "0002";
 
     public static final String FAIL_CODE    = "9999";
 

@@ -20,7 +20,6 @@ public class CarRecordMapperTest {
     @Test
     public void insertTest() {
         CarRecord cr = new CarRecord();
-        cr.setPlateId(12345L);
         cr.setType(1);
         cr.setReason("阿娘士大夫");
         int insert = carRecordMapper.insert(cr);
@@ -29,7 +28,7 @@ public class CarRecordMapperTest {
 
     @Test
     public void queryByPlateOrPhoneTest() {
-        List<RecordPO> recordPOS = carRecordMapper.queryByPlateOrPhone("13282810619");
+//        List<RecordPO> recordPOS = carRecordMapper.queryByPlateOrPhone("13282810619");
     }
 
 }

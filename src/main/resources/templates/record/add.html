@@ -7,6 +7,7 @@
 		<title>新增</title>
 		<link rel="stylesheet" type="text/css" th:href="@{/css/base.css}"/>
 		<link rel="stylesheet" type="text/css" th:href="@{/css/add.css}" />
+		<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
 	</head>
 
 	<body>
@@ -14,18 +15,22 @@
 			<div class="_info">
 				录入车辆信息
 			</div>
-			<div class="_form">
+			<form class="_form" id="_addForm">
 				<div class="clearFix _inpu">
 					<span class="_sub_title f_left">车牌号码：</span>
-					<input type="text" name="plateNum" id="plateNum" value="" placeholder="" class="f_right" />
+					<input type="text" name="plateNumber" id="plateNumber" value="" placeholder="" class="f_right" />
 				</div>
 				<div class="clearFix _inpu">
 					<span class="_sub_title f_left">手机号码：</span>
-					<input type="text" name="plateNum" id="plateNum" value="" placeholder="" class="f_right" />
+					<input type="text" name="mobile" id="mobile" value="" placeholder="" class="f_right" />
+				</div>
+				<div class="clearFix _inpu">
+					<span class="_sub_title f_left">车主姓名：</span>
+					<input type="text" name="realName" id="realName" value="" placeholder="" class="f_right" />
 				</div>
 				<div class="clearFix _inpu">
 					<span class="_sub_title f_left">出入原因：</span>
-					<input type="text" name="plateNum" id="plateNum" value="" placeholder="" class="f_right" />
+					<input type="text" name="reason" id="reason" value="" placeholder="" class="f_right" />
 				</div>
 				<div class="clearFix _inpu">
 					<span class="_sub_title f_left">出入类型：</span>
@@ -48,11 +53,12 @@
 
 				</div>
 				<div class="_submitBtn">
-					<input type="button" value="提交" />
+					<input type="submit" value="提交" />
 				</div>
 
-			</div>
+			</form>
 		</div>
+		<script type="text/javascript" th:src="@{/js/add.js}"></script>
 	</body>
 
 </html>

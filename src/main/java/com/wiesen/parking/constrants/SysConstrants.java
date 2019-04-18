@@ -9,6 +9,6 @@ public interface SysConstrants {
 
     String SESSION_KEY = "userInfo";
 
-    int LOGIN_EXPIRE_TIME = 120;
+    int LOGIN_EXPIRE_TIME = 3600;
 
 }

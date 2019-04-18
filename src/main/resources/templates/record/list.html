@@ -47,8 +47,9 @@
     </div>
 </div>
 <script type="text/javascript">
-    var url = window.location.host;
-    console.log(url);
+    var hostUrl = window.location.host;
+    hostUrl = "http://" + hostUrl + "/parking";
+    console.log(hostUrl);
 
     $('#_searchBtn').click(function () {
         // 判断返回按钮是否隐藏
@@ -61,10 +62,10 @@
             if (searchStr != '') {
                 // 如果搜索内容不为空, 则执行查询
                 console.log('adsf' + searchStr + 'asdfdsfa');
-                window.open("http://wiesen.nat300.top/parking/record/list?val=" + searchStr);
+                window.location.href = hostUrl + "/record/list?val=" + searchStr;
             } else {
                 // 如果内容为空 查全部
-                window.open("http://wiesen.nat300.top/parking/record/list");
+                window.location.href = hostUrl + "/record/list";
             }
             // 清空搜索框, 隐藏搜索框, 隐藏删除按钮, 显示返回按钮和副标题
             $('#_subTitle').show();
@@ -90,6 +91,10 @@
     $('#_reset').click(function () {
         $('#_search').val('');
         $('#_reset').hide();
+    });
+
+    $('#_back').click(function () {
+        window.location.href =  hostUrl + "/index";
     });
 
 </script>

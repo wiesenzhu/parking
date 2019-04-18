@@ -8,7 +8,7 @@
 		<link rel="stylesheet" type="text/css" th:href="@{/css/common.css}" />
 		<link rel="stylesheet" type="text/css" th:href="@{/css/index.css}" />
 		<link rel="shortcut icon" th:href="@{/favicon.ico}"/>
-		<!--<link rel="icon" href="data:image/ico;base64,aWNv">-->
+		<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
 	</head>
 	<body>
 		<div class="head_info">
@@ -21,14 +21,14 @@
 			<img th:src="@{/imgs/index_head.png}"/>
 		</div>
 
-		<div class="button">
+		<div class="button to_rec_btn">
 			<div class="_text_big">录入</div>
 			<span class="_text_normal">
 				录入车辆信息
 			</span>
 			<div class="_toRec_bg"></div>
 		</div>
-		<div class="button but2">
+		<div class="button but2 rec_list_btn">
 			<div class="_text_big">记录</div>
 			<span class="_text_normal2">
 				查看车辆记录
@@ -40,5 +40,6 @@
 		
 		<div class="bottom">
 		</div>
+		<script type="text/javascript" th:src="@{/js/index.js}"></script>
 	</body>
 </html>
